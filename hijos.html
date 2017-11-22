@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<!-- 	PÁGINA 2	-->
+
+<script type="text/javascript">
+
+  function newHijo (box, botonId) {
+    document.getElementById(box).style.display = "block";
+    document.getElementById(botonId).style.display = "none";
+  }
+</script>
+
+<body>
+
+<div class="container">
+<div class="col-md-4 text-center">
+<img src="assets/agencia-tributaria.jpg" class="img-responsive" alt="Imagen responsive">
+</div>
+</div>
+<div class="col-xs-12" style="height:20px;"></div>
+<div class="container">
+<div class="col-md-2" style="width: 1000px;">
+
+<ul class="nav nav-tabs" style="align-self: center;">
+  <li><a href="index.html">Datos Personales</a></li>
+  <li class="active"><a href="hijos.html">Hijos</a></li>
+  <li><a href="ascendientes.html">Ascendientes</a></li>
+  <li><a href="pensiones.html">Pensiones compensatorias</a></li>
+  <li><a href="pagos.html">Pagos sobre vivienda</a></li>
+  <li><a href="fechaYFirma.html">Fecha y firma</a></li>
+</ul>
+</div>
+<div class="col-xs-12" style="height:40px;"></div>
+</div>
+
+<!-- PROGRESS BAR -->
+<div class="container" style="max-width: 800px;">
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+  aria-valuemin="0" aria-valuemax="100" style="width:32%">
+    <span class="">Progreso: 32%</span>
+  </div>
+</div>
+</div>
+
+<div class="col-xs-12" style="height:50px;"></div>
+
+<!-- ......HIJO 1...... -->
+<div class="container">
+<h2><strong>Hijos y otros descendientes menores de 25 años</strong></h2>
+<div class="col-xs-12" style="height:20px;"></div>
+
+<h3><strong>Hijo o descendiente 1</strong></h3>
+<div class="col-xs-12" style="height:50px;"></div>
+
+	<div class="form-group row" role="form-group">
+  		<div class="col-xs-4">
+  		<label for="nif">Año de nacimiento</label>
+    	<input type="nif" class="form-control" id="nif"
+           placeholder="">
+        <small id="nacimiento_ayuda" class="text-muted">
+   		Ej: 1990 <br>
+   		</small>
+
+      <div class="col-xs-12" style="height:30px;"></div>
+
+      <label for="nombre">Año de adopción o acogimiento</label>
+      <input type="nombre" class="form-control" id="nombre"
+           placeholder="">
+        <small id="nacimiento_ayuda" class="text-muted">
+      Solo en el caso de haber sido adoptados o acogidos. Si no es su caso, deje esta casilla en blanco.
+      </small>
+      </div>
+
+  <div class="col-xs-4">
+  <label for="minusvalia">Si el descendiente tiene reconocido un grado de minusvalía marque la casilla que corresponda a su situación.</label>
+
+  <div class="radio">
+  <label>
+    <input type="radio" name="optradio2" id="c4" autocomplete="off"> Igual o superior al 33% e inferior al 65%
+  </label>
+  </div>
+
+  <div class="col-xs-12" style="height:10px;"></div>
+  <div class="radio">
+  <label>
+    <input type="radio" name="optradio2" id="c5" autocomplete="off"> Igual o superior al 65%
+  </label>
+  </div>
+
+  <div class="col-xs-12" style="height:10px;"></div>
+  <div class="checkbox">
+  <label>
+    <input type="checkbox" id="c6" autocomplete="off"> Además, tiene acreditada la necesidad de ayuda de terceras personas o movilidad reducida
+  </label>
+  </div>
+</div>
+<div class="col-xs-4">
+  <label for="computo">Cómputo por entero de hijos o descendientes</label>
+  <div class="checkbox">
+  <label>
+    <input type="checkbox" id="c6" autocomplete="off"> El descendiente convive únicamente con Vd. sin convivir el con otro progenitor o alguno de sus abuelos
+  </label>
+  </div>
+</div>
+</div>
+<hr />
+<div class="col-xs-12" style="height:50px;"></div>
+<!-- ......FINAL DATOS DESCENDIENTES...... -->
+
+<!-- BOTÓN AÑADIR HIJOS -->
+
+<div class="container text-center" id="boton1" style="display:block;">
+ <div class="col-xs-12">
+  <label for="add_son">Haga click aquí para añadir otro hijo o descendiente</label>
+  </div>
+    <button type="submit" onclick="newHijo('newHijo2_div','boton1')" class="btn btn-default">
+      <span class="glyphicon glyphicon-plus"></span>
+    </button>
+</div>
+
+<!-- FINAL BOTÓN AÑADIR HIJOS -->
+</div>
+
+
+<!-- ......HIJO 2...... -->
+<div id="newHijo2_div" style="display:none;">
+<div class="container">
+<h3><strong>Hijo o descendiente 2</strong></h3>
+<div class="col-xs-12" style="height:50px;"></div>
+
+  <div class="form-group row" role="form-group">
+      <div class="col-xs-4">
+      <label for="nif">Año de nacimiento</label>
+      <input type="nif" class="form-control" id="nif"
+           placeholder="">
+        <small id="nacimiento_ayuda" class="text-muted">
+      Ej: 1990 <br>
+      </small>
+
+      <div class="col-xs-12" style="height:30px;"></div>
+
+      <label for="nombre">Año de adopción o acogimiento</label>
+      <input type="nombre" class="form-control" id="nombre"
+           placeholder="">
+        <small id="nacimiento_ayuda" class="text-muted">
+      Solo en el caso de haber sido adoptados o acogidos. Si no es su caso, deje esta casilla en blanco.
+      </small>
+      </div>
+
+  <div class="col-xs-4">
+  <label for="minusvalia">Si el descendiente tiene reconocido un grado de minusvalía marque la casilla que corresponda a su situación.</label>
+
+  <div class="radio">
+  <label>
+    <input type="radio" name="optradio2" id="c4" autocomplete="off"> Igual o superior al 33% e inferior al 65%
+  </label>
+  </div>
+
+  <div class="col-xs-12" style="height:10px;"></div>
+  <div class="radio">
+  <label>
+    <input type="radio" name="optradio2" id="c5" autocomplete="off"> Igual o superior al 65%
+  </label>
+  </div>
+
+  <div class="col-xs-12" style="height:10px;"></div>
+  <div class="checkbox">
+  <label>
+    <input type="checkbox" id="c6" autocomplete="off"> Además, tiene acreditada la necesidad de ayuda de terceras personas o movilidad reducida
+  </label>
+  </div>
+</div>
+<div class="col-xs-4">
+  <label for="computo">Cómputo por entero de hijos o descendientes</label>
+  <div class="checkbox">
+  <label>
+    <input type="checkbox" id="c6" autocomplete="off"> El descendiente convive únicamente con Vd. sin convivir el con otro progenitor o alguno de sus abuelos
+  </label>
+  </div>
+</div>
+</div>
+<hr />
+<div class="col-xs-12" style="height:50px;"></div>
+<!-- ......FINAL DATOS DESCENDIENTES...... -->
+
+<!-- BOTÓN AÑADIR HIJOS -->
+
+<div class="container text-center" id="boton2" style="display:block;">
+ <div class="col-xs-12">
+  <label for="add_son">Haga click aquí para añadir otro hijo o descendiente</label>
+  </div>
+    <button type="submit" onclick="newHijo('newHijo3_div','boton2')" class="btn btn-default">
+      <span class="glyphicon glyphicon-plus"></span>
+    </button>
+</div>
+
+<!-- FINAL BOTÓN AÑADIR HIJOS -->
+</div>
+</div>
+
+<!-- ......HIJO 3...... -->
+<div id="newHijo3_div" style="display:none;">
+<div class="container">
+<h3><strong>Hijo o descendiente 3</strong></h3>
+<div class="col-xs-12" style="height:50px;"></div>
+
+  <div class="form-group row" role="form-group">
+      <div class="col-xs-4">
+      <label for="nif">Año de nacimiento</label>
+      <input type="nif" class="form-control" id="nif"
+           placeholder="">
+        <small id="nacimiento_ayuda" class="text-muted">
+      Ej: 1990 <br>
+      </small>
+
+      <div class="col-xs-12" style="height:30px;"></div>
+
+      <label for="nombre">Año de adopción o acogimiento</label>
+      <input type="nombre" class="form-control" id="nombre"
+           placeholder="">
+        <small id="nacimiento_ayuda" class="text-muted">
+      Solo en el caso de haber sido adoptados o acogidos. Si no es su caso, deje esta casilla en blanco.
+      </small>
+      </div>
+
+  <div class="col-xs-4">
+  <label for="minusvalia">Si el descendiente tiene reconocido un grado de minusvalía marque la casilla que corresponda a su situación.</label>
+
+  <div class="radio">
+  <label>
+    <input type="radio" name="optradio2" id="c4" autocomplete="off"> Igual o superior al 33% e inferior al 65%
+  </label>
+  </div>
+
+  <div class="col-xs-12" style="height:10px;"></div>
+  <div class="radio">
+  <label>
+    <input type="radio" name="optradio2" id="c5" autocomplete="off"> Igual o superior al 65%
+  </label>
+  </div>
+
+  <div class="col-xs-12" style="height:10px;"></div>
+  <div class="checkbox">
+  <label>
+    <input type="checkbox" id="c6" autocomplete="off"> Además, tiene acreditada la necesidad de ayuda de terceras personas o movilidad reducida
+  </label>
+  </div>
+</div>
+<div class="col-xs-4">
+  <label for="computo">Cómputo por entero de hijos o descendientes</label>
+  <div class="checkbox">
+  <label>
+    <input type="checkbox" id="c6" autocomplete="off"> El descendiente convive únicamente con Vd. sin convivir el con otro progenitor o alguno de sus abuelos
+  </label>
+  </div>
+</div>
+</div>
+<hr />
+<div class="col-xs-12" style="height:50px;"></div>
+<!-- ......FINAL DATOS DESCENDIENTES...... -->
+
+<!-- BOTÓN AÑADIR HIJOS -->
+
+<div class="container text-center" id="boton3" style="display:block;">
+ <div class="col-xs-12">
+  <label for="add_son">Haga click aquí para añadir otro hijo o descendiente</label>
+  </div>
+    <button type="submit" onclick="newHijo('newHijo4_div','boton3')" class="btn btn-default">
+      <span class="glyphicon glyphicon-plus"></span>
+    </button>
+</div>
+
+<!-- FINAL BOTÓN AÑADIR HIJOS -->
+</div>
+</div>
+
+<!-- ......HIJO 4...... -->
+<div id="newHijo4_div" style="display:none;">
+<div class="container">
+<h3><strong>Hijo o descendiente 4</strong></h3>
+<div class="col-xs-12" style="height:50px;"></div>
+
+  <div class="form-group row" role="form-group">
+      <div class="col-xs-4">
+      <label for="nif">Año de nacimiento</label>
+      <input type="nif" class="form-control" id="nif"
+           placeholder="">
+        <small id="nacimiento_ayuda" class="text-muted">
+      Ej: 1990 <br>
+      </small>
+
+      <div class="col-xs-12" style="height:30px;"></div>
+
+      <label for="nombre">Año de adopción o acogimiento</label>
+      <input type="nombre" class="form-control" id="nombre"
+           placeholder="">
+        <small id="nacimiento_ayuda" class="text-muted">
+      Solo en el caso de haber sido adoptados o acogidos. Si no es su caso, deje esta casilla en blanco.
+      </small>
+      </div>
+
+  <div class="col-xs-4">
+  <label for="minusvalia">Si el descendiente tiene reconocido un grado de minusvalía marque la casilla que corresponda a su situación.</label>
+
+  <div class="radio">
+  <label>
+    <input type="radio" name="optradio2" id="c4" autocomplete="off"> Igual o superior al 33% e inferior al 65%
+  </label>
+  </div>
+
+  <div class="col-xs-12" style="height:10px;"></div>
+  <div class="radio">
+  <label>
+    <input type="radio" name="optradio2" id="c5" autocomplete="off"> Igual o superior al 65%
+  </label>
+  </div>
+
+  <div class="col-xs-12" style="height:10px;"></div>
+  <div class="checkbox">
+  <label>
+    <input type="checkbox" id="c6" autocomplete="off"> Además, tiene acreditada la necesidad de ayuda de terceras personas o movilidad reducida
+  </label>
+  </div>
+</div>
+<div class="col-xs-4">
+  <label for="computo">Cómputo por entero de hijos o descendientes</label>
+  <div class="checkbox">
+  <label>
+    <input type="checkbox" id="c6" autocomplete="off"> El descendiente convive únicamente con Vd. sin convivir el con otro progenitor o alguno de sus abuelos
+  </label>
+  </div>
+</div>
+</div>
+<hr />
+<div class="col-xs-12" style="height:50px;"></div>
+<!-- ......FINAL DATOS DESCENDIENTES...... -->
+
+<!-- BOTÓN AÑADIR HIJOS -->
+
+<div class="container text-center" id="boton3" style="display:block;">
+ <div class="col-xs-12">
+  <label for="add_son">Haga click aquí para añadir otro hijo o descendiente</label>
+  </div>
+    <button type="submit" onclick="newHijo('newHijo4_div','boton3')" class="btn btn-default">
+      <span class="glyphicon glyphicon-plus"></span>
+    </button>
+</div>
+
+<!-- FINAL BOTÓN AÑADIR HIJOS -->
+</div>
+</div>
+
+
+<!-- PIE DE PÁGINA -->
+<div class="container">
+<ul class="pager btn-lg">
+<ul class="pagination">
+  <li><a href="index.html">1</a></li>
+  <li class="active"><a href="hijos.html">2</a></li>
+  <li><a href="ascendientes.html">3</a></li>
+  <li><a href="pensiones.html">4</a></li>
+  <li><a href="pagos.html">5</a></li>
+  <li><a href="fechaYFirma.html">6</a></li>
+</ul>
+
+  <li class="previous"><a href="index.html">&larr; Anterior</a></li>
+  <li class="next" ><a href="ascendientes.html">Siguiente &rarr;</a></li>
+
+
+
+</ul>
+</div>
+<!-- FIN DE PIE DE PÁGINA -->
+
+</body>
+</html>
